@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>西恩 dota</title>
+	<style type="text/css">
+		input::-webkit-input-placeholder { 
+			color: #999; 
+			-webkit-transition: color.5s; 
+		} 
+		input:focus::-webkit-input-placeholder, input:hover::-webkit-input-placeholder { color: #c2c2c2; 
+			-webkit-transition: color.5s; 
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form >
+			<p>author name:<input type="text" placeholder="作者名" name="authorname"/></p>
+		</form>
+		%for book in booklist%}
+			<li>
+				{{book.title}}
+				<form action="/message/" method="get">
+					<button type="submit" value= {{book.isbn}} name = "bookisbn" > More</button> 
+				</form>
+				<form action="/delete/" method="get">
+					<button type="submit" value= {{book.title}} name = "booktitle" > delete</button> 
+				</form>
+			</li>
+		
+		{%endfor%}
+		<form action="/search/">
+			<button>返回</button>
+		</form>
+	</div>
+</body>

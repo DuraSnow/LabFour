@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>西恩 dota</title>
+	<style type="text/css">
+		input::-webkit-input-placeholder { 
+			color: #999; 
+			-webkit-transition: color.5s; 
+		} 
+		input:focus::-webkit-input-placeholder, input:hover::-webkit-input-placeholder { color: #c2c2c2; 
+			-webkit-transition: color.5s; 
+		}
+	</style>
+	<h3>增加作者</h3>
+</head>
+<body>
+	<div>
+		<form  action="/addresult_b/" method="get" >
+			<p>book title :<input type="text" placeholder="图书题目" name="booktitle"/></p>
+			<P>已经存在的作者id{%for id in idlist%}
+				{{id}}
+			{%endfor%}
+			</P>
+			<p>book authorid:<input type="text" placeholder="authorid" name="authorid"/></p>
+			<p>book isbn :<input type="text" placeholder="isbn" name="bookisbn"/></p>
+			<p>book publisher :<input type="text" placeholder="出版者" name="bookpublisher"/></p>
+
+			<p>book publication_date :<input type="text" placeholder="出版日期" name="bookdate"/></p>
+			<p>book price:<input type="text" placeholder="价格" name="bookprice"/></p>
+  			<input type="submit" value="Submit" />
+		</form>
+	</div>
+</body>
+</html>
+		

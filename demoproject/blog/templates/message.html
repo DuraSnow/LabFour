@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>西恩 dota</title>
+</head>
+<body>
+	<div>
+		<li>书名：{{books.title}}</li>
+		<li>ISBN：{{books.isbn}}</li>
+		<li>出版社：{{books.publisher}}</li>
+		<li>出版日期：{{books.publication_date}}</li>
+		<li>价格：{{books.price}}元</li>
+	</div>
+	<form action="/result2" method="get">
+			<button type="submit" value= {{books.authorid}} name = "authorid" >返回</button> 
+	</form>
+</body>
+</html>
+		
